@@ -8,7 +8,7 @@ function pintarReloj() {
 
     var reloj = hora + ':' + minuto + ':' + segundo;
 
-    document.getElementById('display').value = reloj;
+    document.getElementById('displayReloj').value = reloj;
 
     setTimeout('pintarReloj()', 1000);
 }
@@ -18,5 +18,13 @@ function pintarReloj() {
 
 
 function pintarFecha() {
+    /*   var meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'); */
+    var fecha = new Date();
+    var dia = fecha.getDate();
+    var mes = fecha.getMonth() + 1;
+    var year = fecha.getFullYear();
 
+    var fechaActual = dia + ' de ' + mes + ' del ' + year;
+
+    document.getElementById('displayFecha').value = fechaActual;
 }
