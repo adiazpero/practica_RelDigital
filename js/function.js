@@ -28,3 +28,17 @@ function pintarFecha() {
 
     document.getElementById('displayFecha').value = fechaActual;
 }
+
+
+
+function pintarFechaPrueba() {
+    var meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+    var fecha = new Date();
+    var dia = fecha.getDate();
+    var mes = fecha.getMonth();
+    var year = fecha.getFullYear();
+
+    var fechaActual = dia + ' de ' + meses[mes] + ' del ' + year;
+
+    document.getElementById('displayFecha').value = fechaActual;
+}
